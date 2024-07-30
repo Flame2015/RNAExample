@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
-import ErrorPage from './Pages/ErrorPage';
 
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = {hasError: false};//true
+    this.state = {hasError: true};
   }
 
   static getDerivedStateFromError(error) {
@@ -22,10 +21,9 @@ class ErrorBoundary extends Component {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
-        // <View>
-        //   <Text>Something went wrong.</Text>
-        // </View>
-        <ErrorPage/>
+        <View>
+          <Text>Something went wrong.</Text>
+        </View>
       );
     }
 

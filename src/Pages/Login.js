@@ -26,6 +26,10 @@ const Login = (props) => {
     */}
      <Button title="Save Context"
             onPress={() => setCounter(numb)} />
+
+            <Button title="Move to Test Class" 
+                onPress={() => props.navigation.navigate("TestClass")}/>
+                
     </View>)
 }
 
